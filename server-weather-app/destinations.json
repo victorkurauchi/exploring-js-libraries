@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "sydney",
+    "price": 700
+  },
+  {
+    "id": 2,
+    "name": "london",
+    "price": 600
+  },
+  {
+    "id": 3,
+    "name": "paris",
+    "price": 800
+  }
+]

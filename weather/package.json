@@ -1,0 +1,26 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Javascript library to grab weather in your city",
+  "main": "dist/weather.js",
+  "scripts": {
+    "test": "jest",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=dev webpack --progress --colors --watch"
+  },
+  "author": "victorkurauchi@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
