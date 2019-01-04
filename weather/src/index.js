@@ -1,7 +1,7 @@
 require("@babel/polyfill");
 
 const axios = require('axios');
-const { groupBy } = require('lodash');
+const groupBy = require('lodash/groupBy');
 
 class Weather {
   constructor() {
@@ -10,6 +10,10 @@ class Weather {
 
   groupByDates(weather) {
     return groupBy(weather, (item) => item.applicable_date);
+  }
+
+  getApp() {
+    return { app: 'Weather', description: 'Work easily with the weather', date: new Date().toString() };
   }
 
   async getCity(city) {
@@ -25,7 +29,7 @@ class Weather {
   async getWeatherByCity(city) {
     const information = await this.getCity(city);
     const { woeid } = information[0];
-    const { consolidated_weather, sources } = await this.getWeather(woeid);;
+    const { consolidated_weather, sources } = await this.getWeather(woeid);
     const dates = this.groupByDates(consolidated_weather);
     const result = {
       dates,

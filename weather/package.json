@@ -5,7 +5,7 @@
   "main": "dist/weather.js",
   "scripts": {
     "test": "jest",
-    "build": "NODE_ENV=production webpack",
+    "build": "NODE_ENV=production webpack --mode production",
     "dev": "NODE_ENV=dev webpack --progress --colors --watch"
   },
   "author": "victorkurauchi@gmail.com",
@@ -20,7 +20,9 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.4",
+    "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.28.2",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2"
   }
 }
